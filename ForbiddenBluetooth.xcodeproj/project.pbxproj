@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1098140D8F8093A75DD0F144 /* Pods_ForbiddenBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B921D77635F538BB3CA5DE6 /* Pods_ForbiddenBluetooth.framework */; };
 		4C53AC7622A0453F00B24BE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C53AC7522A0453F00B24BE6 /* AppDelegate.swift */; };
 		4C53AC7822A0453F00B24BE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C53AC7722A0453F00B24BE6 /* ViewController.swift */; };
 		4C53AC7B22A0453F00B24BE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C53AC7922A0453F00B24BE6 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B921D77635F538BB3CA5DE6 /* Pods_ForbiddenBluetooth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ForbiddenBluetooth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C53AC7222A0453F00B24BE6 /* ForbiddenBluetooth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForbiddenBluetooth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C53AC7522A0453F00B24BE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C53AC7722A0453F00B24BE6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		4C53AC7C22A0454000B24BE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C53AC7F22A0454000B24BE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C53AC8122A0454000B24BE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B1E0AB16C489787A998A17A /* Pods-ForbiddenBluetooth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForbiddenBluetooth.release.xcconfig"; path = "Target Support Files/Pods-ForbiddenBluetooth/Pods-ForbiddenBluetooth.release.xcconfig"; sourceTree = "<group>"; };
+		C84CD70CD7FC97C4A3263B0E /* Pods-ForbiddenBluetooth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForbiddenBluetooth.debug.xcconfig"; path = "Target Support Files/Pods-ForbiddenBluetooth/Pods-ForbiddenBluetooth.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1098140D8F8093A75DD0F144 /* Pods_ForbiddenBluetooth.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3F8C4687A27B52767B70DAD7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B921D77635F538BB3CA5DE6 /* Pods_ForbiddenBluetooth.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		4C53AC6922A0453F00B24BE6 = {
 			isa = PBXGroup;
 			children = (
 				4C53AC7422A0453F00B24BE6 /* ForbiddenBluetooth */,
 				4C53AC7322A0453F00B24BE6 /* Products */,
+				B224ABFF3565E8C0E7FA0AF7 /* Pods */,
+				3F8C4687A27B52767B70DAD7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +79,16 @@
 			path = ForbiddenBluetooth;
 			sourceTree = "<group>";
 		};
+		B224ABFF3565E8C0E7FA0AF7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C84CD70CD7FC97C4A3263B0E /* Pods-ForbiddenBluetooth.debug.xcconfig */,
+				9B1E0AB16C489787A998A17A /* Pods-ForbiddenBluetooth.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,6 +96,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4C53AC8422A0454000B24BE6 /* Build configuration list for PBXNativeTarget "ForbiddenBluetooth" */;
 			buildPhases = (
+				5BF33924718573BC98C849CB /* [CP] Check Pods Manifest.lock */,
 				4C53AC6E22A0453F00B24BE6 /* Sources */,
 				4C53AC6F22A0453F00B24BE6 /* Frameworks */,
 				4C53AC7022A0453F00B24BE6 /* Resources */,
@@ -129,6 +155,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5BF33924718573BC98C849CB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ForbiddenBluetooth-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4C53AC6E22A0453F00B24BE6 /* Sources */ = {
@@ -280,6 +331,7 @@
 		};
 		4C53AC8522A0454000B24BE6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C84CD70CD7FC97C4A3263B0E /* Pods-ForbiddenBluetooth.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +350,7 @@
 		};
 		4C53AC8622A0454000B24BE6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B1E0AB16C489787A998A17A /* Pods-ForbiddenBluetooth.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
