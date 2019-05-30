@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1098140D8F8093A75DD0F144 /* Pods_ForbiddenBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B921D77635F538BB3CA5DE6 /* Pods_ForbiddenBluetooth.framework */; };
 		4C37100A22A0484E00C115BA /* DeviceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C37100922A0484E00C115BA /* DeviceListViewController.swift */; };
+		4C37101022A0738E00C115BA /* BluetoothSwitchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C37100F22A0738E00C115BA /* BluetoothSwitchView.swift */; };
 		4C53AC7622A0453F00B24BE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C53AC7522A0453F00B24BE6 /* AppDelegate.swift */; };
 		4C53AC7B22A0453F00B24BE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C53AC7922A0453F00B24BE6 /* Main.storyboard */; };
 		4C53AC7D22A0454000B24BE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C53AC7C22A0454000B24BE6 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* Begin PBXFileReference section */
 		0B921D77635F538BB3CA5DE6 /* Pods_ForbiddenBluetooth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ForbiddenBluetooth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C37100922A0484E00C115BA /* DeviceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListViewController.swift; sourceTree = "<group>"; };
+		4C37100F22A0738E00C115BA /* BluetoothSwitchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothSwitchView.swift; sourceTree = "<group>"; };
 		4C53AC7222A0453F00B24BE6 /* ForbiddenBluetooth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForbiddenBluetooth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C53AC7522A0453F00B24BE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C53AC7A22A0453F00B24BE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -48,6 +50,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		4C37100E22A0736400C115BA /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				4C37100F22A0738E00C115BA /* BluetoothSwitchView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		4C53AC6922A0453F00B24BE6 = {
 			isa = PBXGroup;
 			children = (
@@ -69,6 +79,7 @@
 		4C53AC7422A0453F00B24BE6 /* ForbiddenBluetooth */ = {
 			isa = PBXGroup;
 			children = (
+				4C37100E22A0736400C115BA /* Components */,
 				4C53AC7522A0453F00B24BE6 /* AppDelegate.swift */,
 				4C37100922A0484E00C115BA /* DeviceListViewController.swift */,
 				4C53AC7922A0453F00B24BE6 /* Main.storyboard */,
@@ -204,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C37100A22A0484E00C115BA /* DeviceListViewController.swift in Sources */,
+				4C37101022A0738E00C115BA /* BluetoothSwitchView.swift in Sources */,
 				4C53AC7622A0453F00B24BE6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

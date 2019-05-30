@@ -44,6 +44,13 @@ class DeviceListViewController: UITableViewController {
     return headerView
   }()
 
+  lazy var tableHeaderView: BluetoothSwitchView = {
+    let bluetoothSwitchView = BluetoothSwitchView(description: "bluetooth is on", isSwitchOn: true)
+    bluetoothSwitchView.delegate = self
+
+    return bluetoothSwitchView
+  }()
+
   // MARK: UIViewController lifecycle
 
   override func viewDidLoad() {
@@ -60,6 +67,17 @@ class DeviceListViewController: UITableViewController {
   }
 
   func setupTableView() {
+    tableView.tableHeaderView = tableHeaderView
     tableView.tableFooterView = UIView()
+  }
+}
+
+extension DeviceListViewController: BluetoothSwitchViewDelegate {
+  func bluetoothSwitchView(_ bluetoothSwitchView: BluetoothSwitchView, didChangeValueOf bluetoothSwitch: UISwitch) {
+    if bluetoothSwitch.isOn {
+      bluetoothSwitchView.descriptionLabel.text = "bluetooth is on"
+    } else {
+      bluetoothSwitchView.descriptionLabel.text = "bluetooth is off"
+    }
   }
 }
