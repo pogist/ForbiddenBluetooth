@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1098140D8F8093A75DD0F144 /* Pods_ForbiddenBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B921D77635F538BB3CA5DE6 /* Pods_ForbiddenBluetooth.framework */; };
+		4C37100A22A0484E00C115BA /* DeviceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C37100922A0484E00C115BA /* DeviceListViewController.swift */; };
 		4C53AC7622A0453F00B24BE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C53AC7522A0453F00B24BE6 /* AppDelegate.swift */; };
-		4C53AC7822A0453F00B24BE6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C53AC7722A0453F00B24BE6 /* ViewController.swift */; };
 		4C53AC7B22A0453F00B24BE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C53AC7922A0453F00B24BE6 /* Main.storyboard */; };
 		4C53AC7D22A0454000B24BE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C53AC7C22A0454000B24BE6 /* Assets.xcassets */; };
 		4C53AC8022A0454000B24BE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C53AC7E22A0454000B24BE6 /* LaunchScreen.storyboard */; };
@@ -17,9 +17,9 @@
 
 /* Begin PBXFileReference section */
 		0B921D77635F538BB3CA5DE6 /* Pods_ForbiddenBluetooth.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ForbiddenBluetooth.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C37100922A0484E00C115BA /* DeviceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceListViewController.swift; sourceTree = "<group>"; };
 		4C53AC7222A0453F00B24BE6 /* ForbiddenBluetooth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ForbiddenBluetooth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C53AC7522A0453F00B24BE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4C53AC7722A0453F00B24BE6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4C53AC7A22A0453F00B24BE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4C53AC7C22A0454000B24BE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C53AC7F22A0454000B24BE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -70,7 +70,7 @@
 			isa = PBXGroup;
 			children = (
 				4C53AC7522A0453F00B24BE6 /* AppDelegate.swift */,
-				4C53AC7722A0453F00B24BE6 /* ViewController.swift */,
+				4C37100922A0484E00C115BA /* DeviceListViewController.swift */,
 				4C53AC7922A0453F00B24BE6 /* Main.storyboard */,
 				4C53AC7C22A0454000B24BE6 /* Assets.xcassets */,
 				4C53AC7E22A0454000B24BE6 /* LaunchScreen.storyboard */,
@@ -203,7 +203,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C53AC7822A0453F00B24BE6 /* ViewController.swift in Sources */,
+				4C37100A22A0484E00C115BA /* DeviceListViewController.swift in Sources */,
 				4C53AC7622A0453F00B24BE6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

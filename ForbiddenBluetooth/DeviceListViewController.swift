@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  DeviceListViewController.swift
 //  ForbiddenBluetooth
 //
 //  Created by Murilo Paixão on 30/05/19.
@@ -8,9 +8,4 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
-  override func viewDidLoad() {
-    super.viewDidLoad()
-  }
-}
+class DeviceListViewController: UITableViewController { }
