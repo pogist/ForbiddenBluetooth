@@ -1,0 +1,13 @@
+included:
+  - ForbiddenBluetooth
+excluded:
+  - Pods
+disabled_rules:
+  - closure_parameter_position
+line_length:
+  warning: 150
+  error: 170
+identifier_name:
+  min_length:
+    error: 1
+    warning: 1

@@ -85,7 +85,6 @@
 				C84CD70CD7FC97C4A3263B0E /* Pods-ForbiddenBluetooth.debug.xcconfig */,
 				9B1E0AB16C489787A998A17A /* Pods-ForbiddenBluetooth.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -100,6 +99,7 @@
 				4C53AC6E22A0453F00B24BE6 /* Sources */,
 				4C53AC6F22A0453F00B24BE6 /* Frameworks */,
 				4C53AC7022A0453F00B24BE6 /* Resources */,
+				4C37100822A0464600C115BA /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -157,6 +157,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4C37100822A0464600C115BA /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  \"${PODS_ROOT}/SwiftLint/swiftlint\"\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 		5BF33924718573BC98C849CB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
