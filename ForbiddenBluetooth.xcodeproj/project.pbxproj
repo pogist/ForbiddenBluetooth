@@ -15,6 +15,8 @@
 		4C53AC7B22A0453F00B24BE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C53AC7922A0453F00B24BE6 /* Main.storyboard */; };
 		4C53AC7D22A0454000B24BE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C53AC7C22A0454000B24BE6 /* Assets.xcassets */; };
 		4C53AC8022A0454000B24BE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C53AC7E22A0454000B24BE6 /* LaunchScreen.storyboard */; };
+		62A0219D22A1D2D000924994 /* BluetoothManagerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A0219C22A1D2D000924994 /* BluetoothManagerHelper.m */; };
+		62A021A022A1D2F100924994 /* BluetoothDeviceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A0219F22A1D2F100924994 /* BluetoothDeviceHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,13 @@
 		4C53AC7C22A0454000B24BE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C53AC7F22A0454000B24BE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C53AC8122A0454000B24BE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62A0219822A1D26D00924994 /* BluetoothDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BluetoothDevice.h; sourceTree = "<group>"; };
+		62A0219922A1D29000924994 /* BluetoothManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BluetoothManager.h; sourceTree = "<group>"; };
+		62A0219A22A1D2D000924994 /* ForbiddenBluetooth-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ForbiddenBluetooth-Bridging-Header.h"; sourceTree = "<group>"; };
+		62A0219B22A1D2D000924994 /* BluetoothManagerHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BluetoothManagerHelper.h; sourceTree = "<group>"; };
+		62A0219C22A1D2D000924994 /* BluetoothManagerHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BluetoothManagerHelper.m; sourceTree = "<group>"; };
+		62A0219E22A1D2F100924994 /* BluetoothDeviceHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BluetoothDeviceHelper.h; sourceTree = "<group>"; };
+		62A0219F22A1D2F100924994 /* BluetoothDeviceHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BluetoothDeviceHelper.m; sourceTree = "<group>"; };
 		9B1E0AB16C489787A998A17A /* Pods-ForbiddenBluetooth.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForbiddenBluetooth.release.xcconfig"; path = "Target Support Files/Pods-ForbiddenBluetooth/Pods-ForbiddenBluetooth.release.xcconfig"; sourceTree = "<group>"; };
 		C84CD70CD7FC97C4A3263B0E /* Pods-ForbiddenBluetooth.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ForbiddenBluetooth.debug.xcconfig"; path = "Target Support Files/Pods-ForbiddenBluetooth/Pods-ForbiddenBluetooth.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,6 +91,8 @@
 		4C53AC7422A0453F00B24BE6 /* ForbiddenBluetooth */ = {
 			isa = PBXGroup;
 			children = (
+				62A0219A22A1D2D000924994 /* ForbiddenBluetooth-Bridging-Header.h */,
+				62A0219722A1D23F00924994 /* BluetoothManager */,
 				4C37100E22A0736400C115BA /* Components */,
 				4C53AC7522A0453F00B24BE6 /* AppDelegate.swift */,
 				4C37100922A0484E00C115BA /* DeviceListViewController.swift */,
@@ -91,6 +102,19 @@
 				4C53AC8122A0454000B24BE6 /* Info.plist */,
 			);
 			path = ForbiddenBluetooth;
+			sourceTree = "<group>";
+		};
+		62A0219722A1D23F00924994 /* BluetoothManager */ = {
+			isa = PBXGroup;
+			children = (
+				62A0219B22A1D2D000924994 /* BluetoothManagerHelper.h */,
+				62A0219C22A1D2D000924994 /* BluetoothManagerHelper.m */,
+				62A0219822A1D26D00924994 /* BluetoothDevice.h */,
+				62A0219922A1D29000924994 /* BluetoothManager.h */,
+				62A0219E22A1D2F100924994 /* BluetoothDeviceHelper.h */,
+				62A0219F22A1D2F100924994 /* BluetoothDeviceHelper.m */,
+			);
+			path = BluetoothManager;
 			sourceTree = "<group>";
 		};
 		B224ABFF3565E8C0E7FA0AF7 /* Pods */ = {
@@ -136,6 +160,7 @@
 				TargetAttributes = {
 					4C53AC7122A0453F00B24BE6 = {
 						CreatedOnToolsVersion = 10.2.1;
+						LastSwiftMigration = 1020;
 					};
 				};
 			};
@@ -219,7 +244,9 @@
 			files = (
 				4C37100A22A0484E00C115BA /* DeviceListViewController.swift in Sources */,
 				4C37101022A0738E00C115BA /* BluetoothSwitchView.swift in Sources */,
+				62A0219D22A1D2D000924994 /* BluetoothManagerHelper.m in Sources */,
 				4C53AC7622A0453F00B24BE6 /* AppDelegate.swift in Sources */,
+				62A021A022A1D2F100924994 /* BluetoothDeviceHelper.m in Sources */,
 				4C37101422A08C0B00C115BA /* StatusHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -367,6 +394,7 @@
 			baseConfigurationReference = C84CD70CD7FC97C4A3263B0E /* Pods-ForbiddenBluetooth.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 423Q26AEEM;
 				INFOPLIST_FILE = ForbiddenBluetooth/Info.plist;
@@ -376,6 +404,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pxao.ForbiddenBluetooth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ForbiddenBluetooth/ForbiddenBluetooth-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -386,6 +416,7 @@
 			baseConfigurationReference = 9B1E0AB16C489787A998A17A /* Pods-ForbiddenBluetooth.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 423Q26AEEM;
 				INFOPLIST_FILE = ForbiddenBluetooth/Info.plist;
@@ -395,6 +426,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.pxao.ForbiddenBluetooth;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ForbiddenBluetooth/ForbiddenBluetooth-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
