@@ -37,6 +37,7 @@ class DeviceListViewController: UITableViewController {
   }
 
   func setupTableView() {
+    tableView.separatorInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)
     tableView.tableHeaderView = tableHeaderView
     tableView.tableFooterView = UIView()
   }
