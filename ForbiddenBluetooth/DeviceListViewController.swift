@@ -12,7 +12,7 @@ class DeviceListViewController: UITableViewController {
 
   // MARK: UI components
 
-  lazy var scanningStatus: ScanningStatusView = ScanningStatusView()
+  lazy var scanningStatus: StatusHeaderView = StatusHeaderView(statusMessage: "Scanning...")
 
   lazy var tableHeaderView: BluetoothSwitchView = {
     let bluetoothSwitchView = BluetoothSwitchView(description: "bluetooth is on", isSwitchOn: true)
@@ -45,6 +45,6 @@ class DeviceListViewController: UITableViewController {
 extension DeviceListViewController: BluetoothSwitchViewDelegate {
   func bluetoothSwitchView(_ bluetoothSwitchView: BluetoothSwitchView, didChangeValueOf bluetoothSwitch: UISwitch) {
     bluetoothSwitchView.descriptionLabel.text = "bluetooth is \(bluetoothSwitch.isOn ? "on" : "off")"
-    scanningStatus.setScanning(bluetoothSwitch.isOn)
+    scanningStatus.setVisibility(bluetoothSwitch.isOn)
   }
 }
