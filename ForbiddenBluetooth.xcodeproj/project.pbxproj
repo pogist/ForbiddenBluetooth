@@ -15,6 +15,9 @@
 		4C53AC7B22A0453F00B24BE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C53AC7922A0453F00B24BE6 /* Main.storyboard */; };
 		4C53AC7D22A0454000B24BE6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C53AC7C22A0454000B24BE6 /* Assets.xcassets */; };
 		4C53AC8022A0454000B24BE6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C53AC7E22A0454000B24BE6 /* LaunchScreen.storyboard */; };
+		62787A9422A1E30600209657 /* Device.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62787A9322A1E30600209657 /* Device.swift */; };
+		62787A9822A1E5C600209657 /* BTManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62787A9722A1E5C600209657 /* BTManager.swift */; };
+		62787A9A22A1E72100209657 /* BTManager+Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62787A9922A1E72100209657 /* BTManager+Notification.swift */; };
 		62A0219D22A1D2D000924994 /* BluetoothManagerHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A0219C22A1D2D000924994 /* BluetoothManagerHelper.m */; };
 		62A021A022A1D2F100924994 /* BluetoothDeviceHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A0219F22A1D2F100924994 /* BluetoothDeviceHelper.m */; };
 /* End PBXBuildFile section */
@@ -30,6 +33,9 @@
 		4C53AC7C22A0454000B24BE6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C53AC7F22A0454000B24BE6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C53AC8122A0454000B24BE6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		62787A9322A1E30600209657 /* Device.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Device.swift; sourceTree = "<group>"; };
+		62787A9722A1E5C600209657 /* BTManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BTManager.swift; sourceTree = "<group>"; };
+		62787A9922A1E72100209657 /* BTManager+Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BTManager+Notification.swift"; sourceTree = "<group>"; };
 		62A0219822A1D26D00924994 /* BluetoothDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BluetoothDevice.h; sourceTree = "<group>"; };
 		62A0219922A1D29000924994 /* BluetoothManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BluetoothManager.h; sourceTree = "<group>"; };
 		62A0219A22A1D2D000924994 /* ForbiddenBluetooth-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ForbiddenBluetooth-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -100,6 +106,9 @@
 				4C53AC7C22A0454000B24BE6 /* Assets.xcassets */,
 				4C53AC7E22A0454000B24BE6 /* LaunchScreen.storyboard */,
 				4C53AC8122A0454000B24BE6 /* Info.plist */,
+				62787A9322A1E30600209657 /* Device.swift */,
+				62787A9722A1E5C600209657 /* BTManager.swift */,
+				62787A9922A1E72100209657 /* BTManager+Notification.swift */,
 			);
 			path = ForbiddenBluetooth;
 			sourceTree = "<group>";
@@ -245,8 +254,11 @@
 				4C37100A22A0484E00C115BA /* DeviceListViewController.swift in Sources */,
 				4C37101022A0738E00C115BA /* BluetoothSwitchView.swift in Sources */,
 				62A0219D22A1D2D000924994 /* BluetoothManagerHelper.m in Sources */,
+				62787A9822A1E5C600209657 /* BTManager.swift in Sources */,
+				62787A9A22A1E72100209657 /* BTManager+Notification.swift in Sources */,
 				4C53AC7622A0453F00B24BE6 /* AppDelegate.swift in Sources */,
 				62A021A022A1D2F100924994 /* BluetoothDeviceHelper.m in Sources */,
+				62787A9422A1E30600209657 /* Device.swift in Sources */,
 				4C37101422A08C0B00C115BA /* StatusHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
