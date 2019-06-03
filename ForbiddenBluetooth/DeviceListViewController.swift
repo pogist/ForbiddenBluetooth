@@ -23,16 +23,29 @@ class DeviceListViewController: UITableViewController {
 
   // MARK: UIViewController lifecycle
 
+  var manager: BTManager!
+
+  var devices: [Device] = [] {
+    didSet {
+      tableView.reloadData()
+    }
+  }
+
   override func viewDidLoad() {
     super.viewDidLoad()
 
     setupNavigationBar()
     setupTableView()
+
+    manager = BTManager(delegate: self)
+    manager.setEnabled(true)
   }
 
   func setupNavigationBar() {
     title = "Devices"
     navigationController?.navigationBar.prefersLargeTitles = true
+
+    scanningStatus.setVisibility(false)
     navigationItem.titleView = scanningStatus
   }
 
@@ -41,11 +54,56 @@ class DeviceListViewController: UITableViewController {
     tableView.tableHeaderView = tableHeaderView
     tableView.tableFooterView = UIView()
   }
+
+  override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return devices.count
+  }
+
+  override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let cell = UITableViewCell(style: .subtitle, reuseIdentifier: nil)
+    cell.accessoryType = .disclosureIndicator
+
+    let device = devices[indexPath.row]
+
+    cell.textLabel?.text = device.name
+    cell.detailTextLabel?.text = device.address
+
+    return cell
+  }
 }
 
 extension DeviceListViewController: BluetoothSwitchViewDelegate {
   func bluetoothSwitchView(_ bluetoothSwitchView: BluetoothSwitchView, didChangeValueOf bluetoothSwitch: UISwitch) {
-    bluetoothSwitchView.descriptionLabel.text = "bluetooth is \(bluetoothSwitch.isOn ? "on" : "off")"
-    scanningStatus.setVisibility(bluetoothSwitch.isOn)
+    manager.setEnabled(bluetoothSwitch.isOn)
+  }
+}
+
+extension DeviceListViewController: BTManagerDelegate {
+  func managerAvailabilityDidChange(_ manager: BTManager) {
+    if manager.isAvailable {
+      manager.startScan()
+      scanningStatus.setVisibility(true)
+    }
+  }
+
+  func managerPowerDidChange(_ manager: BTManager) {
+    if manager.isEnabled {
+      manager.startScan()
+    } else {
+      devices.removeAll()
+    }
+
+    scanningStatus.setVisibility(manager.isEnabled)
+    tableHeaderView.descriptionLabel.text = "bluetooth is \(manager.isEnabled ? "on" : "off")"
+  }
+
+  func manager(_ manager: BTManager, didDiscoverDevice device: Device) {
+    if !devices.contains(device) {
+      devices.append(device)
+    }
+  }
+
+  func manager(_ manager: BTManager, didRemoveDevice device: Device) {
+    devices.removeAll(where: { $0 == device })
   }
 }
