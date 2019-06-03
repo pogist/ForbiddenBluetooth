@@ -18,7 +18,6 @@ protocol BTManagerDelegate: class {
 class BTManager {
   weak var delegate: BTManagerDelegate?
 
-  private var discoveredDevices: Set<Device> = Set()
   private var observers: [String: NSObjectProtocol] = [:]
   private let bluetoothManager = BluetoothManagerHelper.shared()
 
