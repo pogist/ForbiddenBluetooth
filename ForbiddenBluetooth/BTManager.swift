@@ -10,6 +10,9 @@ import Foundation
 
 protocol BTManagerDelegate: class {
   func manager(_ manager: BTManager, didDiscoverDevice device: Device)
+  func manager(_ manager: BTManager, didRemoveDevice device: Device)
+  func managerPowerDidChange(_ manager: BTManager)
+  func managerAvailabilityDidChange(_ manager: BTManager)
 }
 
 class BTManager {
@@ -47,6 +50,14 @@ class BTManager {
             if let device = Device(notification: notification) {
               self.delegate?.manager(self, didDiscoverDevice: device)
             }
+          case BTManager.deviceRemoved:
+            if let device = Device(notification: notification) {
+              self.delegate?.manager(self, didRemoveDevice: device)
+            }
+          case BTManager.powerChanged:
+            self.delegate?.managerPowerDidChange(self)
+          case BTManager.availabilityChanged:
+            self.delegate?.managerAvailabilityDidChange(self)
           default:
             break
           }
