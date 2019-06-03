@@ -19,6 +19,18 @@ class BTManager {
   private var observers: [String: NSObjectProtocol] = [:]
   private let bluetoothManager = BluetoothManagerHelper.shared()
 
+  var isEnabled: Bool {
+    return bluetoothManager.enabled()
+  }
+
+  var isAvailable: Bool {
+    return bluetoothManager.available()
+  }
+
+  var isScanning: Bool {
+    return bluetoothManager.deviceScanningInProgress()
+  }
+
   init(delegate: BTManagerDelegate) {
     self.delegate = delegate
 
