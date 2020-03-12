@@ -80,16 +80,14 @@ extension DeviceListViewController: BluetoothSwitchViewDelegate {
 
 extension DeviceListViewController: BTManagerDelegate {
   func managerAvailabilityDidChange(_ manager: BTManager) {
-    if manager.isAvailable {
-      manager.startScan()
-      scanningStatus.setVisibility(true)
-    }
+    manager.scan(enabled: manager.isAvailable)
+    scanningStatus.setVisibility(manager.isAvailable)
   }
 
   func managerPowerDidChange(_ manager: BTManager) {
-    if manager.isEnabled {
-      manager.startScan()
-    } else {
+    manager.scan(enabled: manager.isEnabled)
+
+    if !manager.isEnabled {
       devices.removeAll()
     }
 

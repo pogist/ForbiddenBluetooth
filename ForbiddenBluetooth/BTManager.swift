@@ -74,13 +74,12 @@ class BTManager {
     }
   }
 
-  func startScan() {
-    bluetoothManager.setDeviceScanningEnabled(true)
-    bluetoothManager.scan(forServices: 0xFFFFFFFF)
-  }
-
-  func stopScan() {
-    bluetoothManager.setDeviceScanningEnabled(false)
+  func scan(enabled: Bool) {
+    bluetoothManager.setDeviceScanningEnabled(enabled)
+    if enabled {
+      bluetoothManager.resetDeviceScanning()
+      bluetoothManager.scan(forServices: 0xFFFFFFFF)
+    }
   }
 
   func setEnabled(_ enabled: Bool) {
